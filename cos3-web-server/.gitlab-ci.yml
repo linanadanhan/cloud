@@ -1,0 +1,36 @@
+image: twalter/maven-docker
+
+variables:
+  MAVEN_OPTS: -Dmaven.repo.local=/cache/maven.repository
+  NAME: cos3-web-server:3.3.1-SNAPSHOT
+  
+#Maven 设置
+before_script:
+  - rm -rf /root/.m2/settings.xml
+  - echo -e "<?xml version=\"1.0\" encoding=\"UTF-8\"?><settings xmlns=\"http://maven.apache.org/SETTINGS/1.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd\"><pluginGroups></pluginGroups><proxies></proxies><servers><server><id>nexus</id><username>admin</username><password>admin123</password></server><server><id>192.168.1.6:5000</id><username>admin</username><password>admin123</password></server></servers><mirrors><mirror><!--This sends everything else to /public --><id>nexus</id><mirrorOf>*</mirrorOf><url>http://192.168.1.6:8081/repository/maven-public/</url></mirror></mirrors><profiles><profile><id>dev</id><repositories><repository><id>nexus</id><url>http://192.168.1.6:8081/repository/maven-releases/</url><releases><enabled>true</enabled></releases><snapshots><enabled>true</enabled></snapshots></repository></repositories><pluginRepositories><pluginRepository><id>nexus</id><url>http://192.168.1.6:8081/repository/maven-snapshots/</url><releases><enabled>true</enabled></releases><snapshots><enabled>true</enabled></snapshots></pluginRepository></pluginRepositories></profile></profiles><activeProfiles><activeProfile>dev</activeProfile></activeProfiles></settings>" > /root/.m2/settings.xml
+
+# 定义 stages
+stages:
+  - build
+  - push
+  
+build:
+  stage: build
+  script: 
+    - "mvn -Dmaven.test.skip=true -U clean deploy dockerfile:build  dockerfile:tag  dockerfile:push"
+    
+  only:
+    - develop
+    - master
+    - /^release-.*$/
+    
+push:
+  stage: push
+  script:
+    - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD 47.97.167.23:5000
+    - docker tag 192.168.1.6:5000/tangram/$NAME 47.97.167.23:5000/tangram/$NAME
+    - docker push 47.97.167.23:5000/tangram/$NAME
+
+  only:
+    - master
+    - /^release-.*$/

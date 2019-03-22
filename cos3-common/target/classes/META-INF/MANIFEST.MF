@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: cos3-common
+Implementation-Version: 3.3.2-SNAPSHOT
+Built-By: luoyw
+Implementation-Vendor-Id: com.gsoft.cos3
+Build-Jdk: 1.8.0_161
+Implementation-URL: http://projects.spring.io/spring-boot/cos3-parent/
+ cos3-common/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

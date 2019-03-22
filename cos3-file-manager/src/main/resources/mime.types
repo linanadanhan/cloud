@@ -1,0 +1,58 @@
+application/postscript	ai eps ps
+application/rtf		rtf
+application/x-tex	tex
+application/x-texinfo	texinfo texi
+application/x-troff	t tr roff
+audio/basic		au
+audio/midi		midi mid
+audio/x-aifc		aifc
+audio/x-aiff            aif aiff
+audio/x-mpeg		mpeg mpg mp2 mp3
+audio/x-wav             wav
+application/vnd.Android.package-archive apk
+application/octet-stream	bin class
+application/msword	doc
+application/vnd.openxmlformats-officedocument.wordprocessingml.document	docx
+application/vnd.ms-excel	xls
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet	xlsx
+application/x-gtar	gtar
+application/x-gzip	gz
+application/java-archive	jar
+application/vnd.ms-powerpoint	pps	ppt
+application/vnd.openxmlformats-officedocument.presentationml.presentation	pptx
+audio/x-pn-realaudio	rmvb
+application/x-tar	tar
+application/x-compressed	tgz
+audio/x-ms-wma	wma
+audio/x-ms-wmv	wmv
+application/vnd.ms-works	wps
+application/x-compress	z
+application/x-zip-compressed	zip
+application/vnd.mpohun.certificate	mpc
+application/x-javascript	js
+audio/x-mpegurl	m3u
+audio/mp4a-latm m4a m4b m4p
+audio/mpeg	mpga
+application/vnd.ms-outlook	msg
+audio/ogg	ogg
+application/pdf	pdf
+
+image/gif		gif GIF
+image/ief		ief
+image/jpeg		jpeg jpg jpe JPG
+image/tiff		tiff tif
+image/png		png PNG
+image/x-xwindowdump	xwd
+image/bmp	bmp
+
+video/mpeg		mpeg mpg mpe
+video/quicktime		qt mov
+video/x-msvideo		avi
+video/3gpp	3gp
+video/x-ms-asf	asf
+video/vnd.mpegurl	m4u
+video/x-m4v	m4v
+video/mp4	mp4 mpg4
+
+text/html		html htm HTML HTM
+text/plain		txt text TXT TEXT log prop rc sh xml c conf h java bpmn

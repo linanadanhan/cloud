@@ -1,0 +1,1 @@
+[![pipeline status](http://gsoft.320.io/cos/cos3-common/badges/master/pipeline.svg)](http://gsoft.320.io/cos/cos3-common/commits/master)

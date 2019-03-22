@@ -1,0 +1,21 @@
+body,p,h1,h2,h3,h4,h5,h6,li,ul,dl,dt,dd,a,span,img,input,table,tr,td,label,button,iframe{padding: 0;margin: 0;list-style: none;border:none}
+body{
+	width: 100%;
+	font-family: "微软雅黑";
+	font-size: 12px;
+	color: #666;
+}
+a{text-decoration: none;color: #666;}
+[v-cloak] {
+	display: none;
+}
+.head{width: 100%;height: 60px;background:#20a0ff;line-height: 60px;padding: 0 30px 0 20px;box-sizing: border-box;position: fixed;top:0;z-index: 100000;}
+.head h1{float:left;color:#fff ;}
+.head .admin{float: right;height: 60px;cursor: pointer;}
+.el-dropdown-menu__item a{display: block;}
+.head .admin .name{font-size: 16px;color: #fff;line-height: 60px;float:left;margin-right: 10px;}
+.head .admin img{width: 40px;margin-top: 10px;border-radius: 50%;float:left;}
+.content{position: absolute;top:60px;bottom:0;left:0;right:0;overflow: hidden;}
+.content .sidebar{width: 17%;position: fixed;top: 60px;left: 0;bottom: 0;background:#eef1f6;box-sizing: border-box;	overflow: hidden;}
+.content .main{width: 83%;height:100%;float: right;box-sizing:border-box;overflow: hidden;}
+.handle{margin-bottom: 10px;}
